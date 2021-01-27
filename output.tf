@@ -1,5 +1,5 @@
 output "payload_path" {
-  value = "${path.module}/.terraform/.dist/${var.code_base}.zip"
+  value = "${data.archive_file.payload.output_path}"
 }
 
 output "code_hash" {

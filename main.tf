@@ -1,6 +1,3 @@
-# provider "aws" {
-# }
-
 resource "null_resource" "install" {
 
   triggers = {
@@ -23,5 +20,5 @@ data "external" "code_base" {
 data "archive_file" "payload" {
     type = "zip"
     source_dir = "${lookup(data.external.code_base.result, "value")}"
-    output_path = "${path.module}/.terraform/.dist/${var.code_base}.zip"
+    output_path = "${path.module}/.terraform/.dist/${local.code_base_escaped}.zip"
 }
