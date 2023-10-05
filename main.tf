@@ -1,3 +1,4 @@
+# Terraform 0.11 compatible
 resource "null_resource" "install" {
 
   triggers = {
