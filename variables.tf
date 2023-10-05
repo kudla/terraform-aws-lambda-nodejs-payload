@@ -1,3 +1,3 @@
 variable "code_base" {
-    type = "string"
+    type = string
 }
